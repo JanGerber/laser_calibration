@@ -1,0 +1,28 @@
+<launch>
+
+
+    <param name="autostart" type="bool" value="true" />
+    <param name="initial_calibration" type="bool" value="false" />
+    <param name="width_calib_obj" type="double" value="0.099" />
+    <param name="angle_calib_obj" type="double" value="40.0" />
+    <param name="delta_a_calib_obj" type="double" value="0.035"/>
+    <param name="offset_alpha_z" type="double" value="18.0"/>
+    <param name="offset_pre_scan" type="double" value="0.2"/>
+    <param name="near_distance" type="double" value="0.15" />
+    <param name="far_distance" type="double" value="0.25" />
+    <param name="calib_obj_offset_z" type="double" value="0.06"/>
+    <param name="trans_ee_l" type="double" value="0.15"/>
+    <param name="pin_lenght" type="double" value="0.150"/>
+    <param name="number_of_scans" type="int" value="200" />
+    <param name="number_of_iterations_ransac_ls" type="int" value="500" />
+    <param name="ransac_threshold" type="double" value="0.005" />
+    <param name="tolerance_inlier" type="double" value="0.005" />
+    <param name="home_pos_x" type="double" value="0.47"/>
+    <param name="home_pos_y" type="double" value="0.0"/>
+    <param name="home_pos_z" type="double" value="0.62"/>
+    <param name="target_directory" value="$(find calibration_flat)/calibration_data/" />
+
+
+    <node name="hand_guiding_node" pkg="hand_guiding" type="hand_guiding_node" output="screen" />
+    <node name="arm_to_laser_scanner_calibration_node" pkg="calibration_flat" type="arm_to_laser_scanner_calibration_node" output="screen" />
+</launch>

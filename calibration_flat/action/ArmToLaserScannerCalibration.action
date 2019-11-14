@@ -1,0 +1,33 @@
+# Define the goal
+bool initial_calibration
+float32 width_calib_obj
+float32 angle_calib_obj
+float32 delta_a_calib_obj
+float32 offset_alpha_z
+float32 offset_pre_scan
+float32 near_distance
+float32 far_distance
+float32 calib_obj_offset_z
+float32 trans_ee_l
+float32 pin_lenght
+uint32 number_of_scans
+uint32 number_of_iterations_ransac_ls
+float32 ransac_threshold
+float32 tolerance_inlier
+float32 home_pos_x
+float32 home_pos_y
+float32 home_pos_z
+string target_directory
+---
+# Define the result
+float32 rot_x
+float32 rot_y
+float32 rot_z
+float32 rot_w
+float32 trans_x
+float32 trans_y
+float32 trans_z
+---
+# Define a feedback message
+
+

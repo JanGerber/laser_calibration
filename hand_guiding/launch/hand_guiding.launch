@@ -1,0 +1,3 @@
+<launch>
+    <node name="hand_guiding_node" pkg="hand_guiding" type="hand_guiding_node" output="screen" />
+</launch>
